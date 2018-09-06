@@ -1,0 +1,2 @@
+streamer="$1"
+streamlink --player mpv http://twitch.tv/$streamer 480p & chatty - channel $streamer -connect
