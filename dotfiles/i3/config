@@ -303,13 +303,15 @@ bindsym $mod+Shift+p exec --no-startup-id "maim -s | xclip -selection clipboard 
 bindsym $mod+o exec --no-startup-id Discord
 bindsym $mod+b exec --no-startup-id qutebrowser
 bindsym $mod+i exec --no-startup-id pavucontrol
-bindsym $mod+Shift+m exec --no-startup-id messengerfordesktop
+#bindsym $mod+Shift+m exec --no-startup-id messengerfordesktop
 bindsym $mod+Shift+t exec --no-startup-id termite -e cmus 
 bindsym $mod+p exec --no-startup-id termite -e ranger
-bindsym $mod+Shift+a exec --no-startup-id termite -e "anime watch --list"
-bindsym $mod+s exec --no-startup-id termite -e "anime watch --provider kissanime --new"
-bindsym $mod+Shift+i exec --no-startup-id termite -e "anime watch --provider kisscartoon --new" 
-
+#bindsym $mod+Shift+a exec --no-startup-id termite -e "anime watch --list"
+#bindsym $mod+s exec --no-startup-id termite -e "anime watch --provider kissanime --new"
+#bindsym $mod+Shift+i exec --no-startup-id termite -e "anime watch --provider kisscartoon --new" 
+bindsym $mod+Shift+i exec --no-startup-id notify-send -a time "`date +" %a %b %d %l:%M %p"`"
+bindsym $mod+Shift+y exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym $mod+Shift+u exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
 
 assign [class="(?i)qutebrowser"] workspace 2 
 assign [class="(?i)Discord"] workspace 3
