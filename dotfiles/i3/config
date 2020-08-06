@@ -312,7 +312,9 @@ bindsym $mod+p exec --no-startup-id termite -e ranger
 bindsym $mod+Shift+i exec --no-startup-id notify-send -a time "`date +" %a %b %d %l:%M %p"`"
 bindsym $mod+Shift+y exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
 bindsym $mod+Shift+u exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym $mod+Shift+w exec google-chrome
 
-assign [class="(?i)qutebrowser"] workspace 2 
+assign [class="(?i)qutebrowser"] workspace 2
+assign [class="(?i)Google Chrome"] workspace 2
 assign [class="(?i)Discord"] workspace 3
 
