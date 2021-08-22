@@ -1,1 +1,1 @@
-sudo pacman -S nitrogen thunar mpv jq youtube-dl qutebrowser rofi i3-gaps neofetch cmus ranger i3-status i3bar
+sudo pacman -S nitrogen thunar mpv jq youtube-dl qutebrowser rofi i3-gaps neofetch cmus ranger i3-status i3bar streamlink chatty
