@@ -44,7 +44,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id "rofi -modi window,drun,run -show drun -sidebar-mode -terminal termite -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"
 
 bindsym $mod+Shift+r restart i3
 
@@ -299,22 +299,18 @@ exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/activ
 
 # Application shortcuts
 
-bindsym $mod+Shift+p exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
+bindsym $mod+p exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
 bindsym $mod+o exec --no-startup-id Discord
 bindsym $mod+b exec --no-startup-id qutebrowser
 bindsym $mod+i exec --no-startup-id pavucontrol
-#bindsym $mod+Shift+m exec --no-startup-id messengerfordesktop
 bindsym $mod+Shift+t exec --no-startup-id termite -e cmus 
-bindsym $mod+p exec --no-startup-id termite -e ranger
-#bindsym $mod+Shift+a exec --no-startup-id termite -e "anime watch --list"
-#bindsym $mod+s exec --no-startup-id termite -e "anime watch --provider kissanime --new"
-#bindsym $mod+Shift+i exec --no-startup-id termite -e "anime watch --provider kisscartoon --new" 
+bindsym $mod+Shift+p exec --no-startup-id termite -e ranger
 bindsym $mod+Shift+i exec --no-startup-id notify-send -a time "`date +" %a %b %d %l:%M %p"`"
 bindsym $mod+Shift+y exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
 bindsym $mod+Shift+u exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym $mod+Shift+w exec google-chrome
+bindsym $mod+Shift+w exec microsoft-edge-dev
 
 assign [class="(?i)qutebrowser"] workspace 2
-assign [class="(?i)Google Chrome"] workspace 2
+assign [class="(?i)Microsoft-Edge-Dev"] workspace 2
 assign [class="(?i)Discord"] workspace 3
-
+assign [class="(?i)Thunar"] workspace 4
