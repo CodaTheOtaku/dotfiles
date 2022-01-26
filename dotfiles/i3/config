@@ -314,3 +314,4 @@ assign [class="(?i)qutebrowser"] workspace 2
 assign [class="(?i)Microsoft-Edge-Dev"] workspace 2
 assign [class="(?i)Discord"] workspace 3
 assign [class="(?i)Thunar"] workspace 4
+assign [class="(?i) Steam"] workspace 1
